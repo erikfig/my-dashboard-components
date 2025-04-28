@@ -1,0 +1,41 @@
+# Node.js dependencies
+node_modules/
+
+# Logs
+*.log
+yarn-error.log
+
+# Build output
+dist/
+build/
+
+# Environment variables
+.env
+.env.local
+
+# Editor settings
+.vscode/
+.idea/
+*.swp
+
+# System files
+.DS_Store
+Thumbs.db
+
+# TypeScript
+*.tsbuildinfo
+
+# Coverage
+coverage/
+
+# Miscellaneous
+*.bak
+*.tmp
+*.old
+
+# Ignore public assets
+public/*.jpeg
+public/*.png
+public/*.html
+!public/logo.png
+!public/logo_rounded.png
