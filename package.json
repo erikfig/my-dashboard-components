@@ -8,6 +8,9 @@
     "prepare": "yarn build",
     "postinstall": "yarn build"
   },
+  "peerDependencies": {
+    "styled-components": "^6.1.17"
+  },
   "dependencies": {
     "apexcharts": "^4.7.0",
     "react": "^19.1.0",
@@ -17,7 +20,6 @@
     "react-apexcharts": "1.4.1",
     "react-select": "^5.10.1",
     "react-toastify": "^11.0.5",
-    "styled-components": "^6.1.17",
     "typescript": "^5.0.0"
   },
   "devDependencies": {
