@@ -6,11 +6,11 @@ import { PaginationProps } from '../pagination'
 type DataTableAsyncProps = {
   columns: Column[],
   query: UseQueryResult<any, Error>
-  onChange?: PaginationProps['onChange']
+  onChangePagination: PaginationProps['onChange']
   title?: string,
 }
 
-export const DataTableAsync = ({ query, columns, onChange }: DataTableAsyncProps) => {
+export const DataTableAsync = ({ query, columns, onChangePagination }: DataTableAsyncProps) => {
   const { data: response, isPending, isFetching, refetch } = query
 
 
@@ -23,8 +23,8 @@ export const DataTableAsync = ({ query, columns, onChange }: DataTableAsyncProps
       total={response?.total}
       perPage={response?.perPage}
       onChange={(p) => {
-        if (onChange) {
-          onChange(p)
+        if (onChangePagination) {
+          onChangePagination(p)
         }
         refetch()
       }}
