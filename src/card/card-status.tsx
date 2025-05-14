@@ -5,6 +5,7 @@ type CardStatusProps = {
   title: string,
   message?: string,
   status: 'danger' | 'warning' | 'success' | 'info',
+  label: string,
 }
 
 const icons = {
@@ -14,8 +15,8 @@ const icons = {
   info: 'info',
 }
 
-export const CardStatus = ({ title, message, status }: CardStatusProps) => (
-  <Card className={`flex flex-row justify-between !py-4 px-4 md:px-8 !bg-${status} text-white`}>
+export const CardStatus = ({ title, message, status, label }: CardStatusProps) => (
+  <Card className={`flex flex-row justify-between !py-4 px-4 md:px-8 !bg-${status} text-white`} title={label}>
     <div>
       <Typography type="h5">{title}</Typography>
       <Typography type="h2" className="font-bold">{message}</Typography>
